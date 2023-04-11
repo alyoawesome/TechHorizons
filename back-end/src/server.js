@@ -29,3 +29,21 @@ app.get('/products/:productId', (req, res) => {
   const product = products.find(product => product.id === productId);
   res.json(product);
 });
+
+app.post('/cart', (req, res) => {
+  const productId = req.body.id;
+  cartItems.push(productId);
+  const populatedCart = populateCartIds(cartItems);
+  res.json(populatedCart);
+});
+
+app.delete('/cart/:productId', (req, res) => {
+  const productId = req.params.productId;
+  cartItems = cartItems.filter(id => id !== productId);
+  const populatedCart = populateCartIds(cartItems);
+  res.json(populatedCart);
+});
+
+app.listen(8000, () => {
+  console.log('Server is listening on port 8000')
+});
