@@ -6,12 +6,18 @@
       </div>
     </router-link>
 
+    <div class="nav-buttons-wrap">
+      <button @click="signOut" v-if="user">Sign Out</button>
+      <router-link to="/cart" >
+      <button>Shopping Cart</button>
+      </router-link>
+    </div>
 
   </div>
 </template>
 
 <script>
-
+import { getAuth, signOut} from 'firebase/auth';
 import logo2 from '../assets/logo2.png';
 
 export default {
@@ -22,6 +28,11 @@ export default {
       logo2,
     }
   },
-  
+  methods: {
+    signOut() {
+      const auth = getAuth();
+      signOut(auth);
+    }
+  }
 }
 </script>
