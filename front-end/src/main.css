@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: Arial;
+   
   }
   
   .page-wrap {
@@ -100,9 +101,22 @@
     width: 100%;
   }
   
+  .nav-buttons-wrap {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+  }
+  
   .logo-wrap {
-    width: 120px;
-    height: 120px;
+    margin-top: -0.9%;
+   margin-right: 65%;
+  
+  
+  }
+  
+  .logo-size {
+    width: 65%;
+    height: 65%;
   }
   
   .products-link {
@@ -121,8 +135,14 @@
   }
   
   .cart-link {
-    position: absolute;
+    position: relative;
     right: 16px;
+    top: 16px;
+  }
+  
+  .signOut-link {
+    position: absolute;
+    right: 300px;
     top: 16px;
   }
   
