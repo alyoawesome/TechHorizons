@@ -64,7 +64,7 @@
         
 
         const actionCodeSettings = {
-          url: `http://localhost:8081/products/${this.$route.params.productId}`,
+          url: `https://techhorizons.onrender.com/products/${this.$route.params.productId}`,
           handleCodeInApp: true,
         }
         await sendSignInLinkToEmail(auth,email, actionCodeSettings);
